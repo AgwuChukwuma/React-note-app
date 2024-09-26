@@ -3,45 +3,20 @@
     display: flex;
   }
   
-  .sidebar {
-    width: 250px;
-    background-color: #f0f0f0; /* Default gray sidebar */
+  .gray-sidebar {
+    width: 350px;
+    background-color: #f0f0f0;
     height: 100vh;
   }
   
   .blue-sidebar {
-    background-color: #2196f3; /* Blue sidebar */
+    background-color: #2179f3f8; 
     color: white;
   }
   
   .note-container {
-    padding: 20px;
+    padding: 0px;
     flex: 1;
-  }
-  
-  .note {
-    border: 1px solid #ccc;
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .note-title {
-    font-weight: bold;
-  }
-  
-  .note-actions {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-  }
-.note-container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
   
   h1 {
@@ -53,14 +28,20 @@
     margin-bottom: 20px;
   }
   
-  .note-input input,
+  .note-input input{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 3%;
+  }
   .note-input textarea {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
+    font-size: 20px;
+    padding-bottom: 100%;
   }
   
   .note-input button {
@@ -109,4 +90,54 @@
   .note-actions button:hover {
     background-color: #1976D2;
   }
-  
+  li{
+    list-style-type: none;
+  }
+
+.note-preview {
+  display: block;
+  color: #6c757d;
+  font-size: 1em;
+  margin-top: 5px;
+}
+
+.sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+.gray-sidebar li {
+  cursor: pointer;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.sidebar li:hover {
+  background-color: #0b69ed;
+}
+.gray-sidebar li:hover {
+  background-color: #6c757d1d;
+}
+
+.search {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #0b69ed;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+button:hover {
+  background-color: #0757c7;
+}

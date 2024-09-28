@@ -32,11 +32,12 @@ const Note = ({setNotes, selectedNote, setSelectedNote}) => {
   useEffect(()=> {
     const saveNote = async () => {
       setLoading(true);
+      const timestamp = new Date().toLocaleDateString();
     if (editNoteId) {
       const noteDoc = doc(db, 'Notes', editNoteId);
-      await updateDoc(noteDoc, { title, content });
+      await updateDoc(noteDoc, { title, content, timestamp });
     } else {
-      await addDoc(notesCollectionRef, { title, content });
+      await addDoc(notesCollectionRef, { title, content, timestamp });
     }
     setLoading(false)
     setTitle("");
